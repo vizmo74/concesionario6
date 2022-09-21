@@ -33,19 +33,19 @@
         <dt><span jhiTranslate="concesionario6App.venta.vehiculo">Vehiculo</span></dt>
         <dd>
           <div *ngIf="venta.vehiculo">
-            <a [routerLink]="['/vehiculo', venta.vehiculo.id, 'view']">{{ venta.vehiculo.id }}</a>
+            <a [routerLink]="['/vehiculo', venta.vehiculo.id, 'view']">{{ venta.vehiculo.marca}}{{ venta.vehiculo.modelo}}</a>
           </div>
         </dd>
         <dt><span jhiTranslate="concesionario6App.venta.cliente">Cliente</span></dt>
         <dd>
           <div *ngIf="venta.cliente">
-            <a [routerLink]="['/cliente', venta.cliente.id, 'view']">{{ venta.cliente.id }}</a>
+            <a [routerLink]="['/cliente', venta.cliente.id, 'view']">{{ venta.cliente.nombre }} {{ venta.cliente.apellidos }}</a>
           </div>
         </dd>
         <dt><span jhiTranslate="concesionario6App.venta.vendedor">Vendedor</span></dt>
         <dd>
           <div *ngIf="venta.vendedor">
-            <a [routerLink]="['/vendedor', venta.vendedor.id, 'view']">{{ venta.vendedor.id }}</a>
+            <a [routerLink]="['/vendedor', venta.vendedor.id, 'view']">{{ venta.vendedor.nombre }} {{ venta.vendedor.apellidos }}</a>
           </div>
         </dd>
       </dl>
