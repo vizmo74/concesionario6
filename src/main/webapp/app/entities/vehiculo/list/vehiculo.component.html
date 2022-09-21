@@ -91,7 +91,7 @@
           <td>{{ vehiculo.modelo }}</td>
           <td>{{ vehiculo.precio }}</td>
           <td jhiTranslate="{{ 'concesionario6App.Combustible.' + vehiculo.tipo }}">{{ vehiculo.tipo }}</td>
-          <td>{{ vehiculo.hibrido }}</td>
+          <td>{{ vehiculo.hibrido?"SI":"NO" }}</td>
           <td>{{ vehiculo.reservado }}</td>
           <td class="text-end">
             <div class="btn-group">
