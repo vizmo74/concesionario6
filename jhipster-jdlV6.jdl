@@ -1,0 +1,62 @@
+
+entity Venta {
+	descuento Double,
+    impuesto Double required,
+    total Double required,
+    fecha LocalDate required
+}
+
+// an ignored comment
+/** not an ignored comment */
+entity Cliente {
+	nombre String required,
+	apellidos String required,
+	email String,
+	telefono String required,
+	dni String required,
+}
+
+/**
+ * The Vendedor entity.
+ */
+entity Vendedor {
+	/**
+	* The firstname attribute.
+	*/
+	nombre String required,
+	apellidos String required,
+	email String,
+	telefono Integer required,
+	dni String required,
+	antiguedad Instant required,
+	salario Double required,
+    comision Double required	
+}
+
+entity Vehiculo {
+	marca String required,
+    modelo String required,
+    precio Double required,
+    tipo Combustible required,
+    hibrido Boolean,
+    reservado Boolean
+}
+
+enum Combustible {
+	Gasolina, Diesel, Electrico	
+}
+
+relationship OneToOne {
+	 Venta to Vehiculo
+}
+
+relationship ManyToOne {
+	Venta to Cliente,
+    Venta to Vendedor
+}
+
+
+paginate Vendedor, Vehiculo with infinite-scroll
+paginate Venta, Cliente with pagination
+
+service all with serviceImpl

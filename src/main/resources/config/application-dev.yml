@@ -19,6 +19,7 @@ logging:
     tech.jhipster: DEBUG
     org.hibernate.SQL: DEBUG
     com.mycompany.myapp: DEBUG
+    javax.management: WARN
 
 spring:
   devtools:
@@ -33,8 +34,8 @@ spring:
   datasource:
     type: com.zaxxer.hikari.HikariDataSource
     url: jdbc:mysql://localhost:3306/concesionario6?useUnicode=true&characterEncoding=utf8&useSSL=false&useLegacyDatetimeCode=false&serverTimezone=UTC&createDatabaseIfNotExist=true
-    username: root
-    password:
+    username: concesionario
+    password: concesionario
     hikari:
       poolName: Hikari
       auto-commit: false
@@ -43,15 +44,15 @@ spring:
         prepStmtCacheSize: 250
         prepStmtCacheSqlLimit: 2048
         useServerPrepStmts: true
-  jpa:
+        jpa:
   liquibase:
     # Remove 'faker' if you do not want the sample data to be loaded automatically
     contexts: dev, faker
   mail:
     host: localhost
     port: 25
-    username:
-    password:
+    username: concesionario
+    password: concesionario
   messages:
     cache-duration: PT1S # 1 second, see the ISO 8601 standard
   thymeleaf:

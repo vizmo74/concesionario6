@@ -1,0 +1,62 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <div *ngIf="venta">
+      <h2 data-cy="ventaDetailsHeading"><span jhiTranslate="concesionario6App.venta.detail.title">Venta</span></h2>
+
+      <hr />
+
+      <jhi-alert-error></jhi-alert-error>
+
+      <jhi-alert></jhi-alert>
+
+      <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="global.field.id">ID</span></dt>
+        <dd>
+          <span>{{ venta.id }}</span>
+        </dd>
+        <dt><span jhiTranslate="concesionario6App.venta.descuento">Descuento</span></dt>
+        <dd>
+          <span>{{ venta.descuento }}</span>
+        </dd>
+        <dt><span jhiTranslate="concesionario6App.venta.impuesto">Impuesto</span></dt>
+        <dd>
+          <span>{{ venta.impuesto }}</span>
+        </dd>
+        <dt><span jhiTranslate="concesionario6App.venta.total">Total</span></dt>
+        <dd>
+          <span>{{ venta.total }}</span>
+        </dd>
+        <dt><span jhiTranslate="concesionario6App.venta.fecha">Fecha</span></dt>
+        <dd>
+          <span>{{ venta.fecha | formatMediumDate }}</span>
+        </dd>
+        <dt><span jhiTranslate="concesionario6App.venta.vehiculo">Vehiculo</span></dt>
+        <dd>
+          <div *ngIf="venta.vehiculo">
+            <a [routerLink]="['/vehiculo', venta.vehiculo.id, 'view']">{{ venta.vehiculo.id }}</a>
+          </div>
+        </dd>
+        <dt><span jhiTranslate="concesionario6App.venta.cliente">Cliente</span></dt>
+        <dd>
+          <div *ngIf="venta.cliente">
+            <a [routerLink]="['/cliente', venta.cliente.id, 'view']">{{ venta.cliente.id }}</a>
+          </div>
+        </dd>
+        <dt><span jhiTranslate="concesionario6App.venta.vendedor">Vendedor</span></dt>
+        <dd>
+          <div *ngIf="venta.vendedor">
+            <a [routerLink]="['/vendedor', venta.vendedor.id, 'view']">{{ venta.vendedor.id }}</a>
+          </div>
+        </dd>
+      </dl>
+
+      <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+        <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Volver</span>
+      </button>
+
+      <button type="button" [routerLink]="['/venta', venta.id, 'edit']" class="btn btn-primary">
+        <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Editar</span>
+      </button>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,10 @@
+{
+  "concesionario6App": {
+    "Combustible": {
+      "null": "",
+      "Gasolina": "Gasolina",
+      "Diesel": "Diesel",
+      "Electrico": "Electrico"
+    }
+  }
+}
