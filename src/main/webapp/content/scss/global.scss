@@ -243,8 +243,15 @@ angular-cli removes postcss-rtl processed inline css, processed rules must be ad
 
 .btn-reservar{
 
-  color: aqua;
+  color: red;
   background: none;
   font-size: .8rem;
+  text-align: center;
+  margin: 0px;
+  padding: 4px;
 
+}
+.btn-reservar:hover{
+
+  color:darkcyan;
 }

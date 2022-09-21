@@ -6,11 +6,11 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.mycompany.myapp</groupId>
-    <artifactId>concesionario-6</artifactId>
+    <artifactId>concesionario</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>jar</packaging>
-    <name>Concesionario 6</name>
-    <description>Description for concesionario6</description>
+    <name>concesionario6</name>
+    <description>Description for concesionario</description>
 
     <repositories>
         <!-- jhipster-needle-maven-repository -->
@@ -34,7 +34,7 @@
         <maven.build.timestamp.format>yyyyMMddHHmmss</maven.build.timestamp.format>
         <maven.compiler.source>${java.version}</maven.compiler.source>
         <maven.compiler.target>${java.version}</maven.compiler.target>
-        <start-class>com.mycompany.myapp.Concesionario6App</start-class>
+        <start-class>com.mycompany.myapp.ConcesionarioApp</start-class>
         <argLine>-Djava.security.egd=file:/dev/./urandom -Xmx1G</argLine>
         <m2e.apt.activation>jdt_apt</m2e.apt.activation>
         <run.addResources>false</run.addResources>
@@ -94,13 +94,6 @@
 
     <dependencyManagement>
         <dependencies>
-        <!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
-		<dependency>
-    			<groupId>mysql</groupId>
-    			<artifactId>mysql-connector-java</artifactId>
-    			<version>8.0.30</version>
-			<scope>provided</scope>
-		</dependency>
             <dependency>
                 <groupId>tech.jhipster</groupId>
                 <artifactId>jhipster-dependencies</artifactId>
@@ -216,6 +209,12 @@
             <groupId>org.testcontainers</groupId>
             <artifactId>jdbc</artifactId>
             <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>8.0.30</version>
+            <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -584,7 +583,7 @@
                             </platforms>
                         </from>
                         <to>
-                            <image>concesionario6:latest</image>
+                            <image>concesionario:latest</image>
                         </to>
                         <container>
                             <entrypoint>
