@@ -62,4 +62,7 @@ public interface VehiculoService {
      * @param id the id of the entity.
      */
     void delete(Long id);
+
+
+    public Optional<Vehiculo> InvertirReserva (Long id);
 }
