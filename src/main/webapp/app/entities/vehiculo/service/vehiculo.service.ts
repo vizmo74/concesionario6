@@ -43,6 +43,10 @@ export class VehiculoService {
     return this.http.delete(`${this.resourceUrl}/${id}`, { observe: 'response' });
   }
 
+  reservarVehiculo(id: number): Observable<EntityResponseType>{
+    return this.http.get<IVehiculo>('${this.resourceUrl}/reservar/${id})', { observe: 'response' });
+  }
+
   getVehiculoIdentifier(vehiculo: Pick<IVehiculo, 'id'>): number {
     return vehiculo.id;
   }

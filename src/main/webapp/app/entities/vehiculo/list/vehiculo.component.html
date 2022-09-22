@@ -96,9 +96,10 @@
           <td class="text-end">
             <div class="btn-group">
 
-              <button type="submit" class="btn-reservar">
-                <fa-icon icon="lock"></fa-icon><span>Reservar</span>
-               </button>
+              <button type="submit" class="btn-reservar" data-cy="entityDetailsButton" (click)="reservar(vehiculo)">
+               <span *ngIf="!vehiculo.reservado">Reservar</span>
+               <span *ngIf="vehiculo.reservado">Cancelar</span>
+              </button>
 
               <button
                 type="submit"

@@ -94,7 +94,7 @@
           <td>{{ venta.fecha | formatMediumDate }}</td>
           <td>
             <div *ngIf="venta.vehiculo">
-              <a [routerLink]="['/vehiculo', venta.vehiculo.id, 'view']">{{ venta.vehiculo.marca}}{{ venta.vehiculo.modelo}}</a>
+              <a [routerLink]="['/vehiculo', venta.vehiculo.id, 'view']">{{ venta.vehiculo.marca}} {{ venta.vehiculo.modelo}}</a>
             </div>
           </td>
           <td>

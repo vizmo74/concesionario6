@@ -64,5 +64,4 @@ public interface VehiculoService {
     void delete(Long id);
 
 
-    public Optional<Vehiculo> InvertirReserva (Long id);
 }
