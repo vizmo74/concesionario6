@@ -44,7 +44,7 @@ export class VehiculoService {
   }
 
   reservarVehiculo(id: number): Observable<EntityResponseType>{
-    return this.http.get<IVehiculo>('${this.resourceUrl}/reservar/${id})', { observe: 'response' });
+    return this.http.get<IVehiculo>(`${this.resourceUrl}/reservar/${id})`, { observe: 'response' });
   }
 
   getVehiculoIdentifier(vehiculo: Pick<IVehiculo, 'id'>): number {
