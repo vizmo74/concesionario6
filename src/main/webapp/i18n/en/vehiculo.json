@@ -24,7 +24,8 @@
       "tipo": "Tipo",
       "hibrido": "Hibrido",
       "reservado": "Reservado",
-      "venta": "Venta"
+      "venta": "Venta",
+      "autoShift": "autoShift"
     }
   }
 }

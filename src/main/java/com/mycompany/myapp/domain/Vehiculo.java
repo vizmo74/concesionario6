@@ -51,6 +51,11 @@ public class Vehiculo implements Serializable {
     @OneToOne(mappedBy = "vehiculo")
     private Venta venta;
 
+    @Column(name = "auto_shift")
+    private boolean autoShift;
+
+
+
     // jhipster-needle-entity-add-field - JHipster will add fields here
 
     public Long getId() {
@@ -121,6 +126,8 @@ public class Vehiculo implements Serializable {
     public Boolean getHibrido() {
         return this.hibrido;
     }
+
+
 
     public Vehiculo hibrido(Boolean hibrido) {
         this.setHibrido(hibrido);

@@ -72,6 +72,11 @@
         </div>
       </div>
 
+      <div class="row mb-3">
+          <label class="form-label" for="field_autoShift">Automático</label>
+          <input type="checkbox" class="form-check" name="Autoshift" id="field_autoShift" data-cy="Autoshift" formControlName="Autoshift" />
+        </div>
+
       <div>
         <button type="button" id="cancel-save" data-cy="entityCreateCancelButton" class="btn btn-secondary" (click)="previousState()">
           <fa-icon icon="ban"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancelar</span>
